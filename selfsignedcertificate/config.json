@@ -1,0 +1,31 @@
+{
+    "name": "Self Signed Certificate",
+    "version": "0.10",
+    "slug": "selfsignedcertificate",
+    "description": "Create a Self-Signed Certificate",
+    "url": "https://github.com/Cloudenius/hassio-addons/",
+    "arch": ["armhf", "armv7", "aarch64", "amd64", "i386"],
+    "startup": "once",
+    "boot": "manual",
+    "map": ["ssl:rw"],
+    "options": {
+      "certfile": "fullchain.pem",
+      "keyfile": "privkey.pem",
+      "validity": 365,
+      "domain": null,
+      "organization": "Home Assistant",
+      "street": "High Street 1",
+      "city": "New York",
+      "country": "US"
+    },
+    "schema": {
+      "certfile": "str",
+      "keyfile": "str",
+      "validity": "int",
+      "domain": "str",
+      "organization": "str",
+      "street": "str",
+      "city": "str",
+      "country": "str"
+    }
+}
